@@ -1,0 +1,922 @@
+Namespace(batch_size=128, cross_validation=False, data_dir='../data', dataset='PROTEINS', degree_as_label=False, dropout=0.5, epoch=300, exp='proteins_gin_gn_fast', fold_idx=2, gpu=-1, graph_pooling_type='sum', learn_eps=True, log_dir='../log/proteins_gin_gn_fast', log_norm=False, lr=0.01, model='GIN', n_hidden=64, n_layers=5, n_mlp_layers=2, neighbor_pooling_type='sum', norm_type='dwgn', seed=9, self_loop=True, split_name='fold10', weight_decay=0.05)
+Downloading ../data/nig.zip from https://raw.githubusercontent.com/weihua916/powerful-gnns/master/dataset.zip...
+loading data...
+there are no node features in this dataset!
+generate node features by node label...
+Done.
+
+            -------- Data Statistics --------'
+            #Graphs: 1113
+            #Graph Classes: 2
+            #Nodes: 43471
+            #Node Classes: 3
+            #Node Features Dim: 3
+            #Edges: 205559
+            #Edge Classes: 0
+            Avg. of #Nodes: 39.06
+            Avg. of #Edges: 184.69
+            Graph Relabeled: {0: 0, 1: 1}
+            Node Relabeled: {0: 0, 1: 1, 2: 2}
+            Degree Relabeled(If degree_as_nlabel=True): {} 
+ 
+train_set: test_set = 1001 : 112
+Average Epoch Time 0.7060
+Train acc 0.6973
+Test acc 0.7054
+Average Epoch Time 0.6715
+Train acc 0.6114
+Test acc 0.6071
+Average Epoch Time 0.6806
+Train acc 0.4096
+Test acc 0.4018
+Average Epoch Time 0.6669
+Train acc 0.6014
+Test acc 0.5982
+Average Epoch Time 0.6577
+Train acc 0.6014
+Test acc 0.5982
+Average Epoch Time 0.6508
+Train acc 0.6114
+Test acc 0.6071
+Average Epoch Time 0.6647
+Train acc 0.6743
+Test acc 0.6875
+Average Epoch Time 0.6595
+Train acc 0.7133
+Test acc 0.7321
+Average Epoch Time 0.6556
+Train acc 0.7193
+Test acc 0.7500
+Average Epoch Time 0.6525
+Train acc 0.7493
+Test acc 0.8036
+Average Epoch Time 0.6506
+Train acc 0.7502
+Test acc 0.7589
+Average Epoch Time 0.6493
+Train acc 0.6274
+Test acc 0.6161
+Average Epoch Time 0.6497
+Train acc 0.5045
+Test acc 0.4643
+Average Epoch Time 0.6481
+Train acc 0.7712
+Test acc 0.7768
+Average Epoch Time 0.6467
+Train acc 0.6663
+Test acc 0.6161
+Average Epoch Time 0.6491
+Train acc 0.7313
+Test acc 0.7500
+Average Epoch Time 0.6488
+Train acc 0.7552
+Test acc 0.7768
+Average Epoch Time 0.6477
+Train acc 0.7283
+Test acc 0.7411
+Average Epoch Time 0.6476
+Train acc 0.7732
+Test acc 0.7857
+Average Epoch Time 0.6490
+Train acc 0.6973
+Test acc 0.7321
+Average Epoch Time 0.6494
+Train acc 0.6833
+Test acc 0.6875
+Average Epoch Time 0.6509
+Train acc 0.5964
+Test acc 0.5982
+Average Epoch Time 0.6507
+Train acc 0.6673
+Test acc 0.6161
+Average Epoch Time 0.6501
+Train acc 0.5994
+Test acc 0.5536
+Average Epoch Time 0.6489
+Train acc 0.6943
+Test acc 0.6518
+Average Epoch Time 0.6494
+Train acc 0.7582
+Test acc 0.7768
+Average Epoch Time 0.6501
+Train acc 0.4386
+Test acc 0.4286
+Average Epoch Time 0.6514
+Train acc 0.7732
+Test acc 0.7679
+Average Epoch Time 0.6513
+Train acc 0.7632
+Test acc 0.7500
+Average Epoch Time 0.6518
+Train acc 0.7572
+Test acc 0.7143
+Average Epoch Time 0.6515
+Train acc 0.7493
+Test acc 0.7143
+Average Epoch Time 0.6502
+Train acc 0.7682
+Test acc 0.7411
+Average Epoch Time 0.6506
+Train acc 0.6963
+Test acc 0.6429
+Average Epoch Time 0.6500
+Train acc 0.7103
+Test acc 0.6518
+Average Epoch Time 0.6495
+Train acc 0.6833
+Test acc 0.7054
+Average Epoch Time 0.6492
+Train acc 0.7123
+Test acc 0.6964
+Average Epoch Time 0.6493
+Train acc 0.6464
+Test acc 0.6071
+Average Epoch Time 0.6490
+Train acc 0.6583
+Test acc 0.6250
+Average Epoch Time 0.6486
+Train acc 0.7003
+Test acc 0.6607
+Average Epoch Time 0.6480
+Train acc 0.6953
+Test acc 0.6607
+Average Epoch Time 0.6479
+Train acc 0.7692
+Test acc 0.7768
+Average Epoch Time 0.6473
+Train acc 0.5754
+Test acc 0.5536
+Average Epoch Time 0.6467
+Train acc 0.7273
+Test acc 0.7232
+Average Epoch Time 0.6465
+Train acc 0.7692
+Test acc 0.7143
+Average Epoch Time 0.6460
+Train acc 0.6583
+Test acc 0.5893
+Average Epoch Time 0.6461
+Train acc 0.7163
+Test acc 0.6875
+Average Epoch Time 0.6458
+Train acc 0.7572
+Test acc 0.7679
+Average Epoch Time 0.6454
+Train acc 0.7672
+Test acc 0.7768
+Average Epoch Time 0.6449
+Train acc 0.6933
+Test acc 0.6696
+Average Epoch Time 0.6444
+Train acc 0.7682
+Test acc 0.7768
+Average Epoch Time 0.6445
+Train acc 0.7483
+Test acc 0.7500
+Average Epoch Time 0.6446
+Train acc 0.7463
+Test acc 0.7411
+Average Epoch Time 0.6442
+Train acc 0.7532
+Test acc 0.7411
+Average Epoch Time 0.6438
+Train acc 0.7103
+Test acc 0.6964
+Average Epoch Time 0.6436
+Train acc 0.6703
+Test acc 0.6607
+Average Epoch Time 0.6440
+Train acc 0.6094
+Test acc 0.5714
+Average Epoch Time 0.6441
+Train acc 0.7043
+Test acc 0.6875
+Average Epoch Time 0.6449
+Train acc 0.7732
+Test acc 0.7946
+Average Epoch Time 0.6451
+Train acc 0.7213
+Test acc 0.6607
+Average Epoch Time 0.6459
+Train acc 0.7273
+Test acc 0.6875
+Average Epoch Time 0.6459
+Train acc 0.5974
+Test acc 0.5536
+Average Epoch Time 0.6479
+Train acc 0.7832
+Test acc 0.7946
+Average Epoch Time 0.6483
+Train acc 0.7762
+Test acc 0.7768
+Average Epoch Time 0.6484
+Train acc 0.7083
+Test acc 0.6607
+Average Epoch Time 0.6482
+Train acc 0.5435
+Test acc 0.5089
+Average Epoch Time 0.6480
+Train acc 0.6663
+Test acc 0.6071
+Average Epoch Time 0.6479
+Train acc 0.7632
+Test acc 0.7946
+Average Epoch Time 0.6493
+Train acc 0.6943
+Test acc 0.6875
+Average Epoch Time 0.6491
+Train acc 0.7243
+Test acc 0.6964
+Average Epoch Time 0.6489
+Train acc 0.7423
+Test acc 0.7143
+Average Epoch Time 0.6488
+Train acc 0.6993
+Test acc 0.6696
+Average Epoch Time 0.6487
+Train acc 0.7572
+Test acc 0.7768
+Average Epoch Time 0.6485
+Train acc 0.6474
+Test acc 0.5804
+Average Epoch Time 0.6486
+Train acc 0.6054
+Test acc 0.5357
+Average Epoch Time 0.6486
+Train acc 0.7702
+Test acc 0.7768
+Average Epoch Time 0.6485
+Train acc 0.7542
+Test acc 0.7411
+Average Epoch Time 0.6484
+Train acc 0.7682
+Test acc 0.7679
+Average Epoch Time 0.6483
+Train acc 0.7782
+Test acc 0.7857
+Average Epoch Time 0.6483
+Train acc 0.7792
+Test acc 0.7946
+Average Epoch Time 0.6480
+Train acc 0.7582
+Test acc 0.7768
+Average Epoch Time 0.6480
+Train acc 0.7003
+Test acc 0.6696
+Average Epoch Time 0.6480
+Train acc 0.7612
+Test acc 0.7589
+Average Epoch Time 0.6486
+Train acc 0.7602
+Test acc 0.7679
+Average Epoch Time 0.6490
+Train acc 0.7712
+Test acc 0.7679
+Average Epoch Time 0.6495
+Train acc 0.7622
+Test acc 0.7768
+Average Epoch Time 0.6502
+Train acc 0.6683
+Test acc 0.6518
+Average Epoch Time 0.6504
+Train acc 0.6843
+Test acc 0.6696
+Average Epoch Time 0.6505
+Train acc 0.7343
+Test acc 0.7232
+Average Epoch Time 0.6508
+Train acc 0.6603
+Test acc 0.5714
+Average Epoch Time 0.6507
+Train acc 0.7642
+Test acc 0.7857
+Average Epoch Time 0.6508
+Train acc 0.7293
+Test acc 0.6875
+Average Epoch Time 0.6509
+Train acc 0.7542
+Test acc 0.7054
+Average Epoch Time 0.6509
+Train acc 0.7722
+Test acc 0.7946
+Average Epoch Time 0.6509
+Train acc 0.7542
+Test acc 0.7500
+Average Epoch Time 0.6511
+Train acc 0.7732
+Test acc 0.7768
+Average Epoch Time 0.6512
+Train acc 0.7712
+Test acc 0.7679
+Average Epoch Time 0.6513
+Train acc 0.7732
+Test acc 0.7857
+Average Epoch Time 0.6514
+Train acc 0.7243
+Test acc 0.6875
+Average Epoch Time 0.6514
+Train acc 0.7453
+Test acc 0.7232
+Average Epoch Time 0.6516
+Train acc 0.5694
+Test acc 0.5446
+Average Epoch Time 0.6516
+Train acc 0.7622
+Test acc 0.7679
+Average Epoch Time 0.6537
+Train acc 0.7602
+Test acc 0.7768
+Average Epoch Time 0.6539
+Train acc 0.7682
+Test acc 0.8036
+Average Epoch Time 0.6540
+Train acc 0.7652
+Test acc 0.7679
+Average Epoch Time 0.6559
+Train acc 0.7423
+Test acc 0.7500
+Average Epoch Time 0.6577
+Train acc 0.7712
+Test acc 0.7857
+Average Epoch Time 0.6605
+Train acc 0.7463
+Test acc 0.7143
+Average Epoch Time 0.6627
+Train acc 0.7273
+Test acc 0.6786
+Average Epoch Time 0.6644
+Train acc 0.7692
+Test acc 0.7768
+Average Epoch Time 0.6663
+Train acc 0.7752
+Test acc 0.7946
+Average Epoch Time 0.6681
+Train acc 0.7832
+Test acc 0.8036
+Average Epoch Time 0.6698
+Train acc 0.7762
+Test acc 0.8214
+Average Epoch Time 0.6717
+Train acc 0.7363
+Test acc 0.7321
+Average Epoch Time 0.6737
+Train acc 0.7622
+Test acc 0.7589
+Average Epoch Time 0.6757
+Train acc 0.7532
+Test acc 0.7589
+Average Epoch Time 0.6774
+Train acc 0.7812
+Test acc 0.7857
+Average Epoch Time 0.6791
+Train acc 0.7612
+Test acc 0.7679
+Average Epoch Time 0.6809
+Train acc 0.7333
+Test acc 0.6875
+Average Epoch Time 0.6827
+Train acc 0.7692
+Test acc 0.7768
+Average Epoch Time 0.6842
+Train acc 0.7463
+Test acc 0.7411
+Average Epoch Time 0.6857
+Train acc 0.7742
+Test acc 0.7589
+Average Epoch Time 0.6874
+Train acc 0.7592
+Test acc 0.7768
+Average Epoch Time 0.6910
+Train acc 0.7373
+Test acc 0.6786
+Average Epoch Time 0.6936
+Train acc 0.7742
+Test acc 0.7946
+Average Epoch Time 0.6950
+Train acc 0.7812
+Test acc 0.8125
+Average Epoch Time 0.6957
+Train acc 0.6204
+Test acc 0.6250
+Average Epoch Time 0.6965
+Train acc 0.7672
+Test acc 0.7768
+Average Epoch Time 0.6966
+Train acc 0.7792
+Test acc 0.7946
+Average Epoch Time 0.6966
+Train acc 0.7782
+Test acc 0.7768
+Average Epoch Time 0.6969
+Train acc 0.7642
+Test acc 0.7857
+Average Epoch Time 0.6973
+Train acc 0.7752
+Test acc 0.7857
+Average Epoch Time 0.6975
+Train acc 0.7602
+Test acc 0.7768
+Average Epoch Time 0.6976
+Train acc 0.7822
+Test acc 0.7679
+Average Epoch Time 0.6975
+Train acc 0.7463
+Test acc 0.7589
+Average Epoch Time 0.6980
+Train acc 0.7642
+Test acc 0.7589
+Average Epoch Time 0.6980
+Train acc 0.7722
+Test acc 0.7679
+Average Epoch Time 0.6980
+Train acc 0.7862
+Test acc 0.7589
+Average Epoch Time 0.6980
+Train acc 0.7582
+Test acc 0.7411
+Average Epoch Time 0.6982
+Train acc 0.7073
+Test acc 0.6786
+Average Epoch Time 0.6982
+Train acc 0.7433
+Test acc 0.7411
+Average Epoch Time 0.6983
+Train acc 0.7752
+Test acc 0.7768
+Average Epoch Time 0.6983
+Train acc 0.7842
+Test acc 0.7500
+Average Epoch Time 0.6987
+Train acc 0.7752
+Test acc 0.7768
+Average Epoch Time 0.6986
+Train acc 0.7842
+Test acc 0.7768
+Average Epoch Time 0.6984
+Train acc 0.7802
+Test acc 0.8036
+Average Epoch Time 0.6984
+Train acc 0.7772
+Test acc 0.7857
+Average Epoch Time 0.6983
+Train acc 0.7712
+Test acc 0.7589
+Average Epoch Time 0.6983
+Train acc 0.7393
+Test acc 0.7411
+Average Epoch Time 0.6992
+Train acc 0.6663
+Test acc 0.6786
+Average Epoch Time 0.6993
+Train acc 0.7612
+Test acc 0.7500
+Average Epoch Time 0.6992
+Train acc 0.7792
+Test acc 0.7679
+Average Epoch Time 0.7003
+Train acc 0.7772
+Test acc 0.7589
+Average Epoch Time 0.7034
+Train acc 0.7772
+Test acc 0.7679
+Average Epoch Time 0.7054
+Train acc 0.7263
+Test acc 0.7500
+Average Epoch Time 0.7058
+Train acc 0.7772
+Test acc 0.7857
+Average Epoch Time 0.7056
+Train acc 0.7502
+Test acc 0.7679
+Average Epoch Time 0.7064
+Train acc 0.7682
+Test acc 0.7768
+Average Epoch Time 0.7073
+Train acc 0.7762
+Test acc 0.7321
+Average Epoch Time 0.7079
+Train acc 0.7662
+Test acc 0.7500
+Average Epoch Time 0.7080
+Train acc 0.7792
+Test acc 0.7679
+Average Epoch Time 0.7077
+Train acc 0.7692
+Test acc 0.7589
+Average Epoch Time 0.7075
+Train acc 0.7752
+Test acc 0.7679
+Average Epoch Time 0.7072
+Train acc 0.7622
+Test acc 0.7679
+Average Epoch Time 0.7069
+Train acc 0.7153
+Test acc 0.6964
+Average Epoch Time 0.7071
+Train acc 0.6513
+Test acc 0.6429
+Average Epoch Time 0.7073
+Train acc 0.7622
+Test acc 0.7857
+Average Epoch Time 0.7072
+Train acc 0.7552
+Test acc 0.7589
+Average Epoch Time 0.7070
+Train acc 0.7732
+Test acc 0.7946
+Average Epoch Time 0.7068
+Train acc 0.7712
+Test acc 0.7679
+Average Epoch Time 0.7065
+Train acc 0.7702
+Test acc 0.7679
+Average Epoch Time 0.7062
+Train acc 0.7203
+Test acc 0.6786
+Average Epoch Time 0.7061
+Train acc 0.7473
+Test acc 0.7232
+Average Epoch Time 0.7058
+Train acc 0.7562
+Test acc 0.7500
+Average Epoch Time 0.7056
+Train acc 0.7552
+Test acc 0.7768
+Average Epoch Time 0.7055
+Train acc 0.6464
+Test acc 0.6339
+Average Epoch Time 0.7054
+Train acc 0.7223
+Test acc 0.6964
+Average Epoch Time 0.7054
+Train acc 0.7582
+Test acc 0.7589
+Average Epoch Time 0.7056
+Train acc 0.7672
+Test acc 0.7857
+Average Epoch Time 0.7053
+Train acc 0.7702
+Test acc 0.7589
+Average Epoch Time 0.7051
+Train acc 0.7602
+Test acc 0.7768
+Average Epoch Time 0.7048
+Train acc 0.7802
+Test acc 0.7946
+Average Epoch Time 0.7046
+Train acc 0.7802
+Test acc 0.7768
+Average Epoch Time 0.7044
+Train acc 0.7652
+Test acc 0.7857
+Average Epoch Time 0.7042
+Train acc 0.7662
+Test acc 0.7768
+Average Epoch Time 0.7039
+Train acc 0.7732
+Test acc 0.7857
+Average Epoch Time 0.7037
+Train acc 0.6673
+Test acc 0.6429
+Average Epoch Time 0.7038
+Train acc 0.7742
+Test acc 0.7946
+Average Epoch Time 0.7044
+Train acc 0.7612
+Test acc 0.7946
+Average Epoch Time 0.7043
+Train acc 0.7572
+Test acc 0.7589
+Average Epoch Time 0.7041
+Train acc 0.7163
+Test acc 0.6696
+Average Epoch Time 0.7039
+Train acc 0.7542
+Test acc 0.7679
+Average Epoch Time 0.7036
+Train acc 0.7453
+Test acc 0.7679
+Average Epoch Time 0.7034
+Train acc 0.7672
+Test acc 0.8036
+Average Epoch Time 0.7031
+Train acc 0.7552
+Test acc 0.7321
+Average Epoch Time 0.7031
+Train acc 0.7702
+Test acc 0.7768
+Average Epoch Time 0.7028
+Train acc 0.7662
+Test acc 0.7679
+Average Epoch Time 0.7026
+Train acc 0.6763
+Test acc 0.6339
+Average Epoch Time 0.7024
+Train acc 0.7672
+Test acc 0.7857
+Average Epoch Time 0.7023
+Train acc 0.7742
+Test acc 0.7857
+Average Epoch Time 0.7020
+Train acc 0.7712
+Test acc 0.7768
+Average Epoch Time 0.7018
+Train acc 0.7762
+Test acc 0.7857
+Average Epoch Time 0.7016
+Train acc 0.7582
+Test acc 0.7857
+Average Epoch Time 0.7014
+Train acc 0.7752
+Test acc 0.8036
+Average Epoch Time 0.7014
+Train acc 0.7672
+Test acc 0.7768
+Average Epoch Time 0.7012
+Train acc 0.7512
+Test acc 0.7589
+Average Epoch Time 0.7010
+Train acc 0.7662
+Test acc 0.7679
+Average Epoch Time 0.7009
+Train acc 0.7672
+Test acc 0.7679
+Average Epoch Time 0.7007
+Train acc 0.7632
+Test acc 0.7857
+Average Epoch Time 0.7005
+Train acc 0.7762
+Test acc 0.7857
+Average Epoch Time 0.7003
+Train acc 0.7802
+Test acc 0.7946
+Average Epoch Time 0.7000
+Train acc 0.7812
+Test acc 0.8214
+Average Epoch Time 0.6998
+Train acc 0.7672
+Test acc 0.7768
+Average Epoch Time 0.6995
+Train acc 0.7702
+Test acc 0.7768
+Average Epoch Time 0.6993
+Train acc 0.7672
+Test acc 0.7768
+Average Epoch Time 0.6990
+Train acc 0.7772
+Test acc 0.7946
+Average Epoch Time 0.6987
+Train acc 0.7802
+Test acc 0.7589
+Average Epoch Time 0.6985
+Train acc 0.7662
+Test acc 0.7768
+Average Epoch Time 0.6983
+Train acc 0.7662
+Test acc 0.8036
+Average Epoch Time 0.6981
+Train acc 0.7333
+Test acc 0.7232
+Average Epoch Time 0.6978
+Train acc 0.7642
+Test acc 0.7857
+Average Epoch Time 0.6976
+Train acc 0.7682
+Test acc 0.8036
+Average Epoch Time 0.6976
+Train acc 0.7802
+Test acc 0.8036
+Average Epoch Time 0.6975
+Train acc 0.7722
+Test acc 0.7857
+Average Epoch Time 0.6974
+Train acc 0.7762
+Test acc 0.7679
+Average Epoch Time 0.6982
+Train acc 0.7692
+Test acc 0.7768
+Average Epoch Time 0.6984
+Train acc 0.7622
+Test acc 0.7679
+Average Epoch Time 0.6990
+Train acc 0.7792
+Test acc 0.8036
+Average Epoch Time 0.6989
+Train acc 0.7622
+Test acc 0.7768
+Average Epoch Time 0.6989
+Train acc 0.7732
+Test acc 0.7679
+Average Epoch Time 0.6989
+Train acc 0.7802
+Test acc 0.7857
+Average Epoch Time 0.6988
+Train acc 0.7842
+Test acc 0.7857
+Average Epoch Time 0.6986
+Train acc 0.7782
+Test acc 0.7857
+Average Epoch Time 0.6985
+Train acc 0.7652
+Test acc 0.7857
+Average Epoch Time 0.6987
+Train acc 0.7752
+Test acc 0.7857
+Average Epoch Time 0.6990
+Train acc 0.7742
+Test acc 0.7857
+Average Epoch Time 0.6994
+Train acc 0.7722
+Test acc 0.8125
+Average Epoch Time 0.6997
+Train acc 0.7652
+Test acc 0.8214
+Average Epoch Time 0.6999
+Train acc 0.7512
+Test acc 0.7500
+Average Epoch Time 0.7008
+Train acc 0.7193
+Test acc 0.6875
+Average Epoch Time 0.7019
+Train acc 0.7642
+Test acc 0.7857
+Average Epoch Time 0.7028
+Train acc 0.7652
+Test acc 0.7768
+Average Epoch Time 0.7030
+Train acc 0.7832
+Test acc 0.8036
+Average Epoch Time 0.7036
+Train acc 0.7642
+Test acc 0.7946
+Average Epoch Time 0.7037
+Train acc 0.7792
+Test acc 0.7946
+Average Epoch Time 0.7035
+Train acc 0.7702
+Test acc 0.7768
+Average Epoch Time 0.7033
+Train acc 0.7652
+Test acc 0.7768
+Average Epoch Time 0.7034
+Train acc 0.7782
+Test acc 0.7857
+Average Epoch Time 0.7032
+Train acc 0.7732
+Test acc 0.8125
+Average Epoch Time 0.7032
+Train acc 0.7872
+Test acc 0.7946
+Average Epoch Time 0.7030
+Train acc 0.7622
+Test acc 0.7946
+Average Epoch Time 0.7030
+Train acc 0.7762
+Test acc 0.8125
+Average Epoch Time 0.7032
+Train acc 0.7493
+Test acc 0.7768
+Average Epoch Time 0.7033
+Train acc 0.7732
+Test acc 0.7857
+Average Epoch Time 0.7031
+Train acc 0.7772
+Test acc 0.7679
+Average Epoch Time 0.7033
+Train acc 0.7722
+Test acc 0.7679
+Average Epoch Time 0.7031
+Train acc 0.7752
+Test acc 0.7946
+Average Epoch Time 0.7030
+Train acc 0.7762
+Test acc 0.7946
+Average Epoch Time 0.7028
+Train acc 0.7782
+Test acc 0.8036
+Average Epoch Time 0.7027
+Train acc 0.7473
+Test acc 0.7679
+Average Epoch Time 0.7026
+Train acc 0.7732
+Test acc 0.8036
+Average Epoch Time 0.7024
+Train acc 0.7792
+Test acc 0.7589
+Average Epoch Time 0.7025
+Train acc 0.7782
+Test acc 0.8036
+Average Epoch Time 0.7025
+Train acc 0.7552
+Test acc 0.8036
+Average Epoch Time 0.7025
+Train acc 0.7682
+Test acc 0.8036
+Average Epoch Time 0.7023
+Train acc 0.7812
+Test acc 0.7946
+Average Epoch Time 0.7021
+Train acc 0.7712
+Test acc 0.7946
+Average Epoch Time 0.7019
+Train acc 0.7652
+Test acc 0.7768
+Average Epoch Time 0.7017
+Train acc 0.7752
+Test acc 0.8036
+Average Epoch Time 0.7016
+Train acc 0.7822
+Test acc 0.7857
+Average Epoch Time 0.7015
+Train acc 0.7662
+Test acc 0.7768
+Average Epoch Time 0.7013
+Train acc 0.7812
+Test acc 0.7768
+Average Epoch Time 0.7012
+Train acc 0.7852
+Test acc 0.8036
+Average Epoch Time 0.7010
+Train acc 0.7762
+Test acc 0.8036
+Average Epoch Time 0.7008
+Train acc 0.7852
+Test acc 0.8036
+Average Epoch Time 0.7007
+Train acc 0.7862
+Test acc 0.8036
+Average Epoch Time 0.7005
+Train acc 0.7842
+Test acc 0.7768
+Average Epoch Time 0.7004
+Train acc 0.7742
+Test acc 0.7946
+Average Epoch Time 0.7002
+Train acc 0.7872
+Test acc 0.8036
+Average Epoch Time 0.7001
+Train acc 0.7872
+Test acc 0.7857
+Average Epoch Time 0.6999
+Train acc 0.7842
+Test acc 0.7679
+Average Epoch Time 0.6998
+Train acc 0.7842
+Test acc 0.7857
+Average Epoch Time 0.6997
+Train acc 0.7842
+Test acc 0.8125
+Average Epoch Time 0.6995
+Train acc 0.7872
+Test acc 0.8036
+Average Epoch Time 0.6994
+Train acc 0.7852
+Test acc 0.7857
+Average Epoch Time 0.6993
+Train acc 0.7862
+Test acc 0.8036
+Average Epoch Time 0.6991
+Train acc 0.7852
+Test acc 0.7946
+Average Epoch Time 0.6990
+Train acc 0.7862
+Test acc 0.8214
+Average Epoch Time 0.6989
+Train acc 0.7892
+Test acc 0.7857
+Average Epoch Time 0.6987
+Train acc 0.7902
+Test acc 0.8125
+Average Epoch Time 0.6986
+Train acc 0.7862
+Test acc 0.7857
+Average Epoch Time 0.6985
+Train acc 0.7902
+Test acc 0.7857
+Average Epoch Time 0.6984
+Train acc 0.7912
+Test acc 0.8125
+Average Epoch Time 0.6982
+Train acc 0.7892
+Test acc 0.8125
+Average Epoch Time 0.6981
+Train acc 0.7892
+Test acc 0.7857
+Average Epoch Time 0.6979
+Train acc 0.7882
+Test acc 0.8036
+Average Epoch Time 0.6978
+Train acc 0.7892
+Test acc 0.7946
+Average Epoch Time 0.6977
+Train acc 0.7902
+Test acc 0.7946
+Average Epoch Time 0.6976
+Train acc 0.7892
+Test acc 0.8214
+Average Epoch Time 0.6975
+Train acc 0.7902
+Test acc 0.8125
+Average Epoch Time 0.6974
+Train acc 0.7892
+Test acc 0.8125

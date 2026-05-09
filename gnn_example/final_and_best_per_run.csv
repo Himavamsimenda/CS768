@@ -1,0 +1,13 @@
+file,norm,fold,epoch,avg_epoch_time,train_acc,test_acc,dataset,model,declared_epochs,norm_type_header,exp,best_test_epoch,best_test_acc
+bn_0.txt,bn,0,300,0.2272,0.7752,0.7589,PROTEINS,GIN,300,bn,proteins_gin_gn_fast,87,0.7857
+bn_1.txt,bn,1,300,0.2205,0.7742,0.7857,PROTEINS,GIN,300,bn,proteins_gin_gn_fast,117,0.8036
+bn_2.txt,bn,2,300,0.2268,0.7822,0.7857,PROTEINS,GIN,300,bn,proteins_gin_gn_fast,249,0.8304
+dwgn_0.txt,dwgn,0,300,0.6443,0.7942,0.7768,PROTEINS,GIN,300,dwgn,proteins_gin_gn_fast,21,0.8036
+dwgn_1.txt,dwgn,1,300,0.6603,0.7812,0.7857,PROTEINS,GIN,300,dwgn,proteins_gin_gn_fast,102,0.8125
+dwgn_2.txt,dwgn,2,300,0.6848,0.7892,0.8125,PROTEINS,GIN,300,dwgn,proteins_gin_gn_fast,112,0.8214
+gn_0.txt,gn,0,300,0.6842,0.7812,0.7679,PROTEINS,GIN,300,gn,proteins_gin_gn_fast,203,0.7946
+gn_1.txt,gn,1,300,0.6968,0.7922,0.7679,PROTEINS,GIN,300,gn,proteins_gin_gn_fast,93,0.8214
+gn_2.txt,gn,2,300,0.6885,0.7872,0.8304,PROTEINS,GIN,300,gn,proteins_gin_gn_fast,105,0.8393
+gsgn_0.txt,gsgn,0,300,0.6832,0.7722,0.7679,PROTEINS,GIN,300,gsgn,proteins_gin_gn_fast,22,0.8125
+gsgn_1.txt,gsgn,1,300,0.6837,0.7652,0.7679,PROTEINS,GIN,300,gsgn,proteins_gin_gn_fast,155,0.8125
+gsgn_2.txt,gsgn,2,300,0.7299,0.7662,0.7946,PROTEINS,GIN,300,gsgn,proteins_gin_gn_fast,288,0.8482
